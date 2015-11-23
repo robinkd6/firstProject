@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>Concentration</title>
+  <meta charset="utf-5">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+</head>
+<body background="http://7-themes.com/data_images/out/36/6892690-wood-floor-texture.jpg">
+
+<div id="start_window">
+	<div id="start_game">Start</div>
+</div>
+
+<div class="containter">
+	<div class="jumbotron">
+	<center><h1>Memory Game</h1></center>
+	</div>
+
+
+	<span id="boxBtn">
+			<span class="button">
+				Moves: 
+				<span id="counter">
+					0
+				</span>
+				</span>
+				<span class="button">
+				<a onclick="ResetGame();">Start Over</a>
+			</span>
+		</span>
+	
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- js --> 
+<script>
+
+	$(function() {
+		$('#start_game').click(function() {
+
+			//$("#play_window").show();
+			$('#start_window').hide();
+		});
+		$('.jumbotron').css({
+			'background' : 'black',
+			'border' : '5px solid white',
+			'fontFamily':'Pacifico',
+			'textShadow' : '2px 2px black',
+			'color' : 'gray'
+		});
+
+		$('#boxBtn').css({
+			'fontFamily' : 'Pacifico',
+			'color' : 'white'
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+	#start_window {
+    background: #224B77;
+    background: -moz-radial-gradient(#cc0000 , #000000) repeat scroll 0 0 transparent;
+    background: -webkit-radial-gradient(#cc0000,  #000000) repeat scroll 0 0 transparent;
+    background: -o-radial-gradient(#cc0000 , #000000) repeat scroll 0 0 transparent;
+    background: -ms-radial-gradient(#cc0000, #000000) repeat scroll 0 0 transparent;
+    height: 1050px;
+    position: absolute;
+    width: 1300px;
+    z-index: 2;
+}
+#start_game {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 2px solid grey;
+    border-radius: 5%;
+    font-family: pacifico;
+    font-size: 30px;
+    font-weight: bold;
+    height: 55px;
+    margin: 300px 550px;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+}
+#containter {
+	z-index: -1;
+}
+	div .row > div {
+		position: relative;
+		float: left;
+		width: 130px;
+		height: 155px;
+		margin: 20px;
+		border: 5px double white;
+		border-radius: 5%;
+		box-shadow: 5px 5px 5px black;
+		background: #800000;
+	}
+	#boxBtn {
+		text-align: center;
+		margin: 20px;
+		display: block;
+	}
+	#boxBtn .button {
+		text-transform: uppercase;
+		background: black;
+		padding: 5px;
+		margin: 5px;
+		border-radius: 10%;
+		cursor: pointer;
+	}
+
+	#boxBtn .button:hover {
+  		background: red;
+  	}
+
+  	#boxBtn .button a {
+  		text-decoration: none;
+  		color: white;
+  	}
