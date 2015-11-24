@@ -18,8 +18,32 @@ function randomImg(maxValue, minValue) {
 function shuffleImgs() {
 
 }
+
 $(function() {
+	$('#start_game').click(function() {
+			//$("#play_window").show();
+		$('#start_window').hide();
+
+		});
+	$('#card').flip();
+		//figure out which cards to flip
+		//show card
+
+
+	$('.jumbotron').css({
+			'background' : 'black',
+			'border' : '5px solid white',
+			'fontFamily':'Pacifico',
+			'textShadow' : '2px 2px black',
+			'color' : 'gray'
+	});
+
+	$('#boxBtn').css({
+			'fontFamily' : 'Pacifico',
+			'color' : 'white'
+	});
+		
+	});
 	$('li').each(function(index) {
 		match.push( index + $(this).html() );
-	});
 });

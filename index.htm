@@ -39,7 +39,25 @@
 		</span>
 
 	<div id="memory_game">
-		<ul>
+	<div id="card">
+	<div class="front">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</div>
+	<div class="back">
+		<ul class="cards">
 			<li class="match1"><img src="http://dummygallery.com/wp-content/uploads/2015/08/USA-Flag.jpg"></li>
 			<li class="match2"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1350px-Flag_of_India.svg.png"></li>
 			<li class="match3"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png"></li>
@@ -66,44 +84,15 @@
 			<li class="match12">Spain</li>
 		</ul>
 	</div>
+	</div>
+			</div>
 </div>
 	
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!-- js --> 
-<script>
-
-	$(function() {
-		$('#start_game').click(function() {
-			//$("#play_window").show();
-			$('#start_window').hide();
-		});
-
-
-		$('.jumbotron').css({
-			'background' : 'black',
-			'border' : '5px solid white',
-			'fontFamily':'Pacifico',
-			'textShadow' : '2px 2px black',
-			'color' : 'gray'
-		});
-
-		$('#boxBtn').css({
-			'fontFamily' : 'Pacifico',
-			'color' : 'white'
-		});
-		$('.container .row').click(function() {
-			$('#cards').flip('toggle');
-		});
-		var match =[];
-$('li').each(function(i, elem) {
-	match.push($(elem).text());
-});
-	});
-
-</script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.18/dist/jquery.flip.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.18/dist/jquery.flip.min.js"></script
+
 </body>
 </html>
