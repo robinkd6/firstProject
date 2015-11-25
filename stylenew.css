@@ -1,0 +1,246 @@
+root { 
+    display: block;
+}
+
+body {
+	background-color: #fff;
+	margin: 20px 0px 0px 0px;
+}
+
+body article#game {
+	width: 700px;
+	margin: 0 auto;
+}
+
+header div {
+	height: 40px;
+	font-size: 18px;
+	color: #a67900;
+	padding-top: 15px;
+}
+
+#board {
+	
+    width: 650px;
+   /* height: 495px;*/
+	/*position:absolute;*/
+	/*background-color: rgb(228, 223, 208);*/
+
+}
+
+#s1 {
+    height: 495px;
+	background-image:url(../images/step1.jpg);
+	background-repeat:no-repeat;
+	display:none;
+	
+}
+#s2 {
+    height: 495px;
+	background-image:url(../images/step2.jpg);
+	background-repeat:no-repeat;
+	display:none;
+	
+}
+#s3 {
+   
+	padding-left: 30px;
+	display:none;
+	
+}
+#s4 {
+    height: 495px;
+	background-image:url(../images/step4.jpg);
+	background-repeat:no-repeat;
+	display:none;
+	
+}
+#s5 {
+    height: 495px;
+	background-image:url(../images/step5.jpg);
+	background-repeat:no-repeat;
+	display:none;
+	
+}
+#s6 {
+    height: 495px;
+	background-image:url(../images/step6.jpg);
+	background-repeat:no-repeat;
+	display:none;
+	
+}
+
+#s0 {
+/*	padding-top: 60px;
+	padding-left: 30px;*/
+	 height: 495px;
+	background-image:url(../images/bg.jpg);
+	background-repeat:no-repeat;
+    
+}
+
+header div {
+	text-align: center;
+	font-family: 'Cherry Swash', cursive;
+	font-weight: 400;
+	font-size: 30px;
+	color: rgb(20, 166, 0);
+}
+
+#playButton
+{
+	height:70px;
+	width:300px;
+	/*background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:380px;
+	left:200px;
+	cursor:pointer;
+}
+
+#edButton
+{
+	height:65px;
+	width:250px;
+	/*background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:290px;
+	left:225px;
+	cursor:pointer;
+}
+
+#replayButton
+{
+	height:65px;
+	width:150px;
+/*	background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:420px;
+	left:58px;
+	cursor:pointer;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#FFF;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#shareIcons
+{
+	height:35px;
+	width:150px;
+	/*background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:330px;
+	left:500px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#FFF;
+	font-weight:bold;
+	
+}
+
+#stopwatch
+{
+
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	color:#FFF;
+	font-weight:bold;
+	position:absolute;
+	top:50px;
+	padding-left:30px;
+
+}
+
+#score
+{
+
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#FFF;
+	font-weight:bold;
+	position:absolute;
+	top:150px;
+	padding-left:250px;
+	width: 150px;
+	text-align: center;
+
+}
+
+#resetButton
+{
+	height:65px;
+	width:250px;
+	/*background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:290px;
+	left:225px;
+	cursor:pointer;
+}
+
+#counterItems
+{
+	height:70px;
+	width:90px;
+/*	background-color:#999; opacity:0.5;*/
+	position:relative;
+	top:430px;
+	left:30px; 
+	font-family:Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:10px;
+
+}
+
+#startGameButton
+{
+	font-family: 'Cherry Swash', cursive;
+	font-weight: 400;
+	color: rgb(20, 166, 0);
+	padding-bottom: 10px;
+	display: block;
+}
+
+.tile {
+	float:left;
+	width: 126px;
+	height: 95px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	border: 0px solid #cfcfcf;
+	cursor: pointer;
+	background-image:url(../images/7.png);
+	background-repeat:no-repeat;
+/*	-moz-border-radius: 15px;
+	border-radius: 15px;*/
+}
+
+.tile img {
+	display: block;
+	margin: 0 auto;
+	padding-top: 2px;
+/*	width: 50px;*/
+
+}
+
+.tileColor1 {
+	 background-color: rgb(176, 235, 23);
+}
+
+.tileColor2 {
+	 background-color: rgb(57, 171, 62);
+}
+
+.tileColor3 {
+	 background-color: rgb(130, 189, 46);
+}
+
+.tileColor4 {
+	 background-color: rgb(200, 217, 126);
+}
+
+
+.tileColor5 {
+	 background-color: #82bd2d;
+}

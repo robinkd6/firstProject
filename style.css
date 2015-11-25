@@ -14,11 +14,11 @@
     background: none repeat scroll 0 0 #EEEEEE;
     border: 2px solid grey;
     border-radius: 5%;
-    font-family: pacifico;
+    font-family: Bebas;
     font-size: 30px;
     font-weight: bold;
     height: 55px;
-    margin: 350px 550px;
+    margin: 345px 550px;
     padding: 5px;
     text-align: center;
     width: 200px;
@@ -34,7 +34,7 @@
 	width: 160px;
 	height: 155px;
 	margin: 15px;
-	border: 3px double white;
+	border: 3px none;
 	border-radius: 5%;
 	box-shadow: 5px 5px 5px black;
 	background: #a90329; 
@@ -59,6 +59,7 @@
 		margin: 5px;
 		border-radius: 10%;
 		cursor: pointer;
+		float: right;
 	}
 
 #boxBtn .button:hover {
