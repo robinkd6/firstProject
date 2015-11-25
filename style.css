@@ -29,22 +29,22 @@
 }
 
 #memory_game ul > li {
-		position: relative;
-		float: left;
-		width: 160px;
-		height: 155px;
-		margin: 15px;
-		border: 5px double white;
-		border-radius: 5%;
-		box-shadow: 5px 5px 5px black;
-		background: #800000;
-		font-family: Arial;
-		font-size: 20px;
-		color: white;
-		text-align: center;
-		font-weight: bold;
-		font: 40px;
-		list-style: none;
+    position: relative;
+    float: left;
+	width: 160px;
+	height: 155px;
+	margin: 15px;
+	border: 3px double white;
+	border-radius: 5%;
+	box-shadow: 5px 5px 5px black;
+	background: #a90329; 
+	font-family: Arial;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font: 40px;
+	list-style: none;
 
 	}
 #boxBtn {
