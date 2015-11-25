@@ -1,3 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 18px Bebas;
+	color: #FFF;
+  	background: url('http://7-themes.com/data_images/out/36/6892690-wood-floor-texture.jpg')   
+}
 #start_window {
     background: #224B77;
     background: -moz-radial-gradient(#cc0000 , #000000) repeat scroll 0 0 transparent;
@@ -23,30 +32,33 @@
     text-align: center;
     width: 200px;
     cursor: pointer;
+    z-index: -1;
 }
 #containter {
 	z-index: -1;
 }
 
-#memory_game ul > li {
-    position: relative;
-    float: left;
+#memory_game div {
+	float: left;
 	width: 160px;
 	height: 155px;
 	margin: 15px;
 	border: 3px none;
 	border-radius: 5%;
 	box-shadow: 5px 5px 5px black;
+	padding: 5px;
 	background: #a90329; 
 	font-family: Arial;
 	font-size: 20px;
-	color: white;
-	text-align: center;
-	font-weight: bold;
-	font: 40px;
-	list-style: none;
-
-	}
+	cursor: pointer;
+}
+#memory_game div img {
+	display: none;
+	border-radius: 10px;
+      height: 100%;
+      width: 100%;
+	z-index: 3;
+}
 #boxBtn {
 		text-align: center;
 		margin: 20px;
@@ -59,7 +71,7 @@
 		margin: 5px;
 		border-radius: 10%;
 		cursor: pointer;
-		float: right;
+		position: relative;
 	}
 
 #boxBtn .button:hover {
@@ -70,9 +82,3 @@
   		text-decoration: none;
   		color: white;
   	}
- img {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 30px 0px;
-    position: center;
-}

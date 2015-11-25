@@ -1,14 +1,12 @@
 var cardOpened = "";
-var imgFlipped = "";
-var imgOpened = 0;
+var imgShow = "";
 var count = 0;
- 
-//match = $('#memory_game > ul > li');
+var imgFound = 0;
+
 var match = "#memory_game";
 
-
-var imgFlags = [
-"http://dummygallery.com/wp-content/uploads/2015/08/USA-Flag.jpg", 
+var ImgSource = [
+  "http://dummygallery.com/wp-content/uploads/2015/08/USA-Flag.jpg", 
 "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1350px-Flag_of_India.svg.png",
 "https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png",
 "http://light-house.co.uk/wp-content/uploads/2013/03/French-Flag.jpg",
@@ -25,126 +23,100 @@ var imgFlags = [
 function random(MaxValue, MinValue) {
 		return Math.round(Math.random() * (MaxValue - MinValue) + MinValue);
 	}
-function shuffFlags() {
-	var allFlags = $(match).children();
-	var thisFlag = $(match + " div:first-child");
-	var flagArr = new Array();
+	//shuffle images by storing into a variable then into an array
+function shuffleImgs() {
+	var imgAll = $(match).children();
+	var thisImg = $(match + " div:first-child");
+	var imgArr = new Array();
+	//targeting the first elemend inside div
+	//shuffle images by storing into a variable then into an array
+	for (var i = 0; i < imgAll.length; i++) {
+		imgArr[i] = $("#" + thisImg.attr("id") + " img").attr("src");
+		thisImg = thisImg.next();
+	} //changes image
+	
+		thisImg = $(match + " div:first-child");
+	
+	for (var z = 0; z < ImgAll.length; z++) {
+	var RandomNumber = RandomFunction(0, ImgArr.length - 1);
 
-	for (var i =0; i < allFlags.length; i++) {
-		flagArr[i] = $("#" + thisFlag.attr("id") + " img").attr("src"); //changes image
-		thisFlag = thisFlag.next(); //new flag is next image
-	}
-
-	thisFlag = $(match + " div: first-child");
-
-	for (var j = 0; j < allFlags.length; j++) {
-		var randomImg = random(0, flagArr.length - 1);
-
-		$("#" + thisFlag.attr("id") + " img").attr("src", 
-			flagArr[randomImg]);
-		flagArr.splice(randomImg, 1);
-		thisFlag = thisFlag.next();
+		$("#" + ImgThis.attr("id") + " img").attr("src", ImgArr[RandomNumber]);
+		imgArr.splice(RandomNumber, 1);
+		thisImg = thisImg.next();
 	}
 }
-function restartGame() {
-	shuffFlags();
+
+function resetGame() {
+	shuffleImgs();
 	$(match + " div img").hide();
 	$(match + " div").css("visibility", "visible");
 	count = 0;
-	$("#win").remove();
-	$("#counter").html(counter + "");
+	$("#success").remove();
+	$("#counter").html("" + Counter);
 	cardOpened = "";
-	imgFlipped = "";
-	imgOpened = 0;
+	imgShow = "";
+	ImgFound = 0;
 	return false;
-
 }
-function flipCard() {
+
+function showCard() {
 	var id = $(this).attr("id");
 
-	if($("#" + id + " img").is(":hidden"))
-	{
-		$(match + " div").unbind("click", flipCard);
-
+	if ($("#" + id + " img").is(":hidden")) {
+		$(match + " div").unbind("click", showCard);
+	
 		$("#" + id + " img").slideDown('slow');
 
-		if(imgFlipped === "") {
+		if (imgShow == "") {
 			cardOpened = id;
-			imgFlipped = $("#" + id + " img").attr("src");
-				setTimeout(function() {
-					$(Source + " div").bind("click", flipCard)
-				}, 200);
+			imgShow = $("#" + id + " img").attr("src");
+			setTimeout(function() {
+				$(match + " div").bind("click", showCard)
+			}, 200);
 		} else {
-			openCard = $("#" + id + " img").attr("src");
-			if (imgFlipped !== openCard) {
+			CurrentOpened = $("#" + id + " img").attr("src");
+			if (imgShow != CurrentOpened) {
 				setTimeout(function() {
-					$("#" + id + " img").slideUp('slow');
+					$("#" + id + " img").slideUp('fast');
+					$("#" + cardOpened + " img").slideUp('slow');
 					cardOpened = "";
-					imgOpened = "";
+					imgShow = "";
 				}, 200);
 			} else {
 				$("#" + id + " img").parent().css("visibility", "hidden");
 				$("#" + cardOpened + " img").parent().css("visibility", "hidden");
-				imgOpened++;
+				imgFound++;
 				cardOpened = "";
-				imgOpened = "";
+				imgShow = "";
 			}
 			setTimeout(function() {
-				$(match + " div").bind("click", flipCard)} , 200);
-			}
-			count++;
-				$("#counter").html("" + count);
-				
-			if(imgOpened === imgFlags.length) {
-				alert("Congrats, you win!");
-			}
+				$(match + " div").bind("click", showCard)
+			}, 200);
+		}
+		count++;
+		$("#counter").html("" + count);
+
+		if (imgFound == imgFlags.length) {
+			$("#counter").prepend('<span id="success">You Found All Pictues With </span>');
 		}
 	}
+}
 
-//possible matches
-/*function matchCards(target1,target2) {
-	if(target1.hasClass("match1") && target2.hasClass("match1")){
-		console.log("Match!");
-	} else if (target1.hasClass("match2") && target2.hasClass("match2")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match3 ") && target2.hasClass("match3")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match4") && target2.hasClass("match4")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match5") && target2.hasClass("match5")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match6") && target2.hasClass("match6")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match7") && target2.hasClass("match7")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match8") && target2.hasClass("match8")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match9") && target2.hasClass("match9")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match10") && target2.hasClass("match10")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match11") && target2.hasClass("match11")) {
-		console.log("Match!");
-	} else if (target1.hasClass("match12") && target2.hasClass("match12")) {
-		console.log("Match!");
-	} else {
-		console.log("No match");
-	}
-};
-*/
 $(function() {
-	//storing lists into variables
-var matchImage = $('#memory_game > ul > .square-image');
-var matchText = $('#memory_game > ul > .square-text');
-console.log(matchImage);
-console.log(matchText);
-
-	$('#start_game').click(function() {
+    $('#start_game').click(function() {
 		//$("#play_window").show();
 		$('#start_window').hide();
-		$('img').hide();
-		$('p').hide();
 	});
+
+for (var y = 1; y < 3 ; y++) {
+	$.each(ImgSource, function(i, val) {
+		$(match).append("<div id=card" + y + i + "><img src=" + val + " />");
+	});
+}
+	$(match + " div").click(showCard);
+	shuffleImgs();
+});
+
 	$('.jumbotron').css({
 			'background' : 'black',
 			'border' : '5px solid white',
@@ -156,13 +128,3 @@ console.log(matchText);
 			'fontFamily' : 'Bebas',
 			'color' : 'white'
 	});
-	
-	$(match + " div").click(flipCard);
-	shuffFlags();
-		});
-	$('li').click(function() {
-		//show image, show text
-		
-		$(this).children('img').show();
-		$(this).children('p').show();
-});
